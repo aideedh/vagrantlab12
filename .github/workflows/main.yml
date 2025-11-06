@@ -33,6 +33,6 @@ jobs:
 
       - name: Use secret 
         run: 
-        echo "Using secret: ${{ secrets.API_KEY }}" 
+        echo "Using secret: ${{ secrets.API_KEY }}"
       - name: Use secret
         run: echo "Using secret: ${{ secrets.API_KEY }}"
