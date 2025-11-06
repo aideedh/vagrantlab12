@@ -10,26 +10,29 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3  # Check out the repository code
+        uses: 
+          actions/checkout@v3  # Check out the repository code
 
       - name: Run a simple script
-        run: echo "Hello, GitHub Actions!"
+        run: 
+          echo "Hello, GitHub Actions!"
 
       - name: Run tests
-        run: |
+        run:
           echo "Running tests..."
           python -m unittest discover
 
       - name: Build the application
-        run: |
+        run:
           echo "Building the app..."
           npm install
           npm run build
 
       - name: Set up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '16'
+        uses: 
+          actions/setup-node@v3
+        with: node-version:'16'
 
       - name: Use secret
-        run: echo "Using secret: ${{ secrets.API_KEY }}"
+        run: 
+        echo "Using secret: ${{ secrets.API_KEY }}"
